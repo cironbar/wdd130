@@ -1,0 +1,195 @@
+/* ------------------------------------
+    1. CSS Variables and Universal Reset
+------------------------------------ */
+:root {
+  /* Color Palette for a natural, rugged feel */
+  --primary-color: #0b5345; /* Dark Forest Green */
+  --secondary-color: #f4d03f; /* Gold/Yellow Sand */
+  --accent1-color: #1a5276; /* Deep Blue */
+  --accent2-color: #ecf0f1; /* Light Gray/Off-White */
+
+  /* Fonts */
+  --heading-font: "Times New Roman", "Georgia", serif;
+  --body-font: Arial, Helvetica, sans-serif;
+}
+
+/* Universal Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ------------------------------------
+    2. General Document Styling (MODIFIED)
+------------------------------------ */
+body {
+  font-family: var(--body-font);
+  color: var(--primary-color);
+}
+
+/* Limit Width and Center Content */
+header, main, footer {
+  width: 840px;
+  margin: 0 auto;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--accent1-color);
+    padding: 10px;
+}
+
+header img {
+    width: 80px;
+    height: auto;
+}
+
+/* Navigation Styling */
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--accent2-color);
+    padding: 10px 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background-color: var(--primary-color);
+    border-radius: 5px;
+}
+
+/* Heading Styles */
+h1, h2 {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+  text-align: center; /* Center the section headings */
+}
+
+/* Basic Spacing for Content Elements */
+nav, p, section, article {
+  margin: 16px;
+  padding: 8px;
+}
+
+/* ------------------------------------
+    3. Hero Div and Overlay Styling
+------------------------------------ */
+
+.hero {
+  position: relative;
+}
+
+.hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.hero h1 {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  padding: 16px;
+  text-align: center;
+  opacity: 0.8; 
+  background-color: var(--accent1-color);
+  color: #fff;
+}
+
+.hero article {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 0;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 45%; 
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  border-top: 5px solid var(--secondary-color);
+}
+
+.hero article img {
+  float: right;
+  width: 125px; 
+  margin-left: 15px;
+  margin-bottom: 5px;
+  border-radius: 5px; 
+  box-shadow: 2px 2px 5px var(--primary-color);
+}
+
+/* ------------------------------------
+    4. History and Adventure Sections Styling (NEW)
+------------------------------------ */
+main section {
+    /* Gives sections distinct visual separation */
+    padding: 20px;
+    margin: 30px 16px; 
+    border: 1px solid var(--accent2-color);
+    background-color: #fcfcfc; /* Light background for content */
+    border-radius: 8px;
+}
+
+main section h2 {
+    /* Spacing below the section title */
+    margin-bottom: 10px; 
+    border-bottom: 2px solid var(--secondary-color); /* A nice separator line */
+    padding-bottom: 5px;
+}
+
+main section p {
+    /* Improves readability of paragraph text */
+    line-height: 1.6em;
+    padding: 0 10px; 
+    text-align: justify;
+}
+
+/* Special style for the "Adventure Awaits You!" section 
+   to make it stand out as a Call to Action */
+.adventures {
+    background-color: var(--secondary-color); /* Highlight with the accent color */
+    color: var(--accent1-color); 
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.adventures h2 {
+    color: var(--accent1-color); 
+    font-size: 2em;
+    border-bottom: none;
+}
+
+/* ------------------------------------
+    5. Footer Styling
+------------------------------------ */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--accent1-color);
+    padding: 15px 10px;
+    color: var(--accent2-color);
+}
+
+footer p {
+    color: var(--accent2-color);
+    margin: 0;
+}
+
+/* Remove underlines from social media icon links */
+.socialmedia a {
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.socialmedia img {
+    width: 30px;
+    height: auto;
+}
